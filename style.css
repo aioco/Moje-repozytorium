@@ -1,3 +1,748 @@
-div {
-  background-color: azure;
+:root {
+  --primary-color-headlines: #ffffff;
+  --primary-color-paragraphs: #9ca3af;
+  --primary-color-background: #111928;
+}
+* {
+  font-family: "Inter", sans-serif;
+  color: var(--primary-color-headlines);
+}
+body {
+  background-color: #111928;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.topbar {
+  padding: 24px 5.6% 0 5.6%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper {
+  padding: 0 5.6%;
+}
+
+.logoMenu {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+.logo span {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.menu {
+  display: flex;
+  gap: 32px;
+}
+
+.menu button {
+  background-color: var(--primary-color-background);
+  border: none;
+}
+
+.menu button:hover {
+  cursor: pointer;
+}
+
+.buttonsTopBar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.buttonStart {
+  width: 117px;
+  height: 41px;
+  border-radius: 8px;
+  border-width: 0;
+  padding: 10px 20px;
+  background-color: #1a56db;
+}
+
+.buttonStart span {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+.buttonLogIn {
+  background-color: var(--primary-color-background);
+  border: none;
+}
+.buttonsTopBar button:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 96px 0;
+  gap: 9%;
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.leftContent h1 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.leftContent p {
+  color: var(--primary-color-paragraphs);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0;
+}
+
+.buttonsDonateLearn {
+  display: flex;
+  gap: 16px;
+}
+
+.buttonsDonateLearn button {
+  height: 48px;
+  width: 182px;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+}
+
+.buttonsDonateLearn button:hover {
+  cursor: pointer;
+}
+.buttonsDonateLearn button span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.buttonsDonateLearn button:first-child {
+  background-color: #1a56db;
+}
+
+.buttonsDonateLearn button:nth-child(2) {
+  background-color: #1f2a37;
+  border: 1px;
+  border-color: #4b5563;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.buttonsDonateLearn button:nth-child(2) span {
+  color: var(--primary-color-paragraphs);
+}
+
+.sponsors {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #374151;
+  padding-top: 32px;
+}
+
+.sponsors span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6b7280;
+}
+
+.sponsorsLogo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 27px 0 7.5px 0;
+}
+
+.rightContent button {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  border: none;
+  margin: 0 10px;
+  background-color: var(--primary-color-paragraphs);
+}
+.rightContent button:hover {
+  background-color: var(--primary-color-headlines);
+  cursor: pointer;
+}
+.buttonsDots {
+  position: relative;
+  bottom: 30px;
+}
+
+.socialProof {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1f2a37;
+  box-sizing: border-box;
+  height: 117px;
+  border-radius: 8px;
+  border: 1px;
+  border-style: solid;
+  border-color: #374151;
+  padding: 24px 16px;
+  margin: 0 10% 96px 10%;
+  box-shadow: 0px 10px 15px -3px #0000001a;
+}
+
+.socialNumber {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.socialNumber > span:first-child {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 45px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+.socialNumber > span:nth-child(2) {
+  color: var(--primary-color-paragraphs);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+.socialProof > div:not(:last-child) {
+  border: 0;
+  border-right: 1px;
+  border-style: solid;
+  border-color: #374151;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding-bottom: 96px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5.7%;
+}
+.row > img {
+  box-shadow: 0px 10px 15px -3px #0000001a;
+  height: 406px;
+}
+.row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.row div > span {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 45px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.row div p {
+  color: var(--primary-color-paragraphs);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  margin: 0;
+}
+
+.row button img {
+  width: 20px;
+}
+
+.contentButton {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.contentButton button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.contentButton button:first-child {
+  background-color: #1a56db;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+}
+.contentButton button:first-child span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.contentButton button:nth-child(2) {
+  background-color: #1f2a37;
+  border: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  border-color: #4b5563;
+  padding: 10px 20px;
+}
+
+.contentButton button:nth-child(2) span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: var(--primary-color-paragraphs);
+}
+.row button:hover {
+  cursor: pointer;
+}
+
+.blueButton {
+  background-color: #1a56db;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 184px;
+}
+
+.blueButton span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.donors {
+  display: flex;
+  flex-direction: column;
+  padding: 96px 0;
+  gap: 64px;
+  background-color: #1f2a37;
+  border: solid;
+  border-width: 1px 0;
+  border-color: #374151;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #3f83f8;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.donorsLogosSection {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5.6%;
+  gap: 32px;
+}
+
+.donorsLogosSection div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.donorsLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 142px;
+}
+
+.donorsLogo > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.donorsLogo div span {
+  color: #6b7280;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.donorsLogo button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2a37;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #4b5563;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: var(--primary-color-paragraphs);
+  padding: 8px 12px;
+  gap: 8px;
+}
+
+.donorsLogo button:hover {
+  cursor: pointer;
+}
+
+.fundraising {
+  padding: 96px 5.6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+.fundraisingContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fundraisingCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f2a37;
+  padding: 32px;
+  gap: 16px;
+  border-style: solid;
+  border-color: #374151;
+  border-width: 1px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px -1px #0000001a;
+  box-sizing: border-box;
+  width: 48.2%;
+}
+
+.fundraisingCard > img {
+  box-shadow: 0px 10px 15px -3px #0000001a;
+}
+
+.progressBar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.label div span:first-child {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.label div span:nth-child(2) {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--primary-color-paragraphs);
+}
+
+.label > span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--primary-color-paragraphs);
+}
+
+progress {
+  opacity: 0;
+}
+
+.progressContainer {
+  position: relative;
+  display: inline-block;
+  background: #374151;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progressContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 94%;
+  background: #1c64f2;
+}
+
+.progressContainerLife::before {
+  width: 50.5%;
+}
+
+.fundraisingCard span {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.fundraisingCard p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--primary-color-paragraphs);
+}
+
+.fundraisingButtons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.fundraisingButtons button:first-child {
+  padding: 10px 20px;
+  border-radius: 8px;
+  gap: 8px;
+  background-color: #1c64f2;
+  border: none;
+}
+
+.fundraising button:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px;
+  gap: 8px;
+  border-style: solid;
+  border-color: #4b5563;
+  background-color: #1f2a37;
+}
+
+.fundraisingButtons button span {
+  color: var(--primary-color-paragraphs);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.blogContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 96px 5.6%;
+  background-color: #1f2a37;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #374151;
+}
+
+.blogContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.blogContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blogContentColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.blogContentColumn div > img {
+  width: 100%;
+}
+
+.blogColumnText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.blogContent span {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.blogContent p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--primary-color-paragraphs);
+}
+
+.blogContentColumn a {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.blogContentColumn > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blogContent .blogContentColumn:not(:last-child) {
+  border-right: 1px solid #374151;
+}
+
+.blogContent .blogContentColumn:first-child {
+  padding-right: 32px;
+}
+
+.blogContent .blogContentColumn:last-child {
+  padding-left: 32px;
+}
+
+.blogContent .blogContentColumn:nth-child(2) {
+  padding: 0 32px;
+}
+
+.contact {
+  padding: 96px 5.6%;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0 23.8%;
+}
+
+.heading h2 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 45px;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.heading span {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--primary-color-paragraphs);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 25%;
+}
+
+.emailSubject {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+form div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.yourMessage div {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+form input {
+  background-color: #374151;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  padding: 14px 16px;
+  width: 100%;
+}
+
+form label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+input::placeholder {
+  color: var(--primary-color-paragraphs);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+.yourMessage div input {
+  height: 162px;
+}
+
+form button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  gap: 8px;
+  background-color: #1c64f2;
+  border: none;
+
+  align-self: flex-start;
+}
+
+form button span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
 }
